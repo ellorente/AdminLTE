@@ -41,13 +41,15 @@
         {% include item['path'] %}
     {% endfor %}
     {% block css %}
-        <link rel="stylesheet" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.min.css') }}"/>
-        <link rel="stylesheet" href="{{ asset('node_modules/@fortawesome/fontawesome-free/css/all.min.css') }}"/>
-        <link rel="stylesheet" href="{{ asset('Dinamic/Assets/CSS/custom.css') }}?v=6"/>
+        {#<link rel="stylesheet" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.min.css') }}"/>#}
+        {#<link rel="stylesheet" href="{{ asset('node_modules/@fortawesome/fontawesome-free/css/all.min.css') }}"/>#}
+        {#<link rel="stylesheet" href="{{ asset('Dinamic/Assets/CSS/custom.css') }}?v=6"/>#}
 
-        {#<link rel="stylesheet" href="{{ asset('Dinamic/Assets/plugins/fontawesome-free/css/all.min.css') }}"/>#}
+        <link rel="stylesheet" href="{{ asset('Dinamic/Assets/plugins/fontawesome-free/css/all.min.css') }}"/>
         <link rel="stylesheet" href="{{ asset('Dinamic/Assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}"/>
-        <link rel="stylesheet" href="{{ asset('Dinamic/Assets/CSS/adminlte.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('Dinamic/Assets/CSS/adminlte.min.css') }}"/>        
+        {#<link rel="stylesheet" href="{{ asset('Dinamic/Assets/plugins/fontawesome-free/css/all.min.css') }}"/>#}
+
     {% endblock %}
     {# Adds custom CSS assets #}
     {% for css in assetManager.get('css') %}
@@ -60,19 +62,18 @@
         {% include item['path'] %}
     {% endfor %}
     {% block javascripts %}
-        <script src="{{ asset('node_modules/jquery/dist/jquery.min.js') }}"></script>
-        <script src="{{ asset('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+        {#<script src="{{ asset('node_modules/jquery/dist/jquery.min.js') }}"></script>#}
+        {#<script src="{{ asset('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>#}
         <script src="{{ asset('node_modules/bootbox/dist/bootbox.min.js') }}"></script>
         <script src="{{ asset('node_modules/bootbox/dist/bootbox.locales.min.js') }}"></script>
         <script src="{{ asset('node_modules/pace-js/pace.min.js') }}"></script>
-        <script src="{{ asset('node_modules/@fortawesome/fontawesome-free/js/all.min.js') }}"></script>
+        {#<script src="{{ asset('node_modules/@fortawesome/fontawesome-free/js/all.min.js') }}"></script>#}        
 
-        <script src="{{ asset('Dinamic/Assets/JS/Custom.js') }}?v=6"></script>                
-
-        {#<script src="{{ asset('Dinamic/Assets/plugins/jquery/jquery.min.js') }}"></script>#}
-        {#<script src="{{ asset('Dinamic/Assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>#}
+        <script src="{{ asset('Dinamic/Assets/plugins/jquery/jquery.min.js') }}"></script>
+        <script src="{{ asset('Dinamic/Assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('Dinamic/Assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>        
         <script src="{{ asset('Dinamic/Assets/JS/adminlte.min.js') }}"></script>
+
     {% endblock %}
     {# Adds custom JS assets #}
     {% for js in assetManager.get('js') %}
