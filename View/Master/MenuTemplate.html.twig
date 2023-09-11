@@ -161,9 +161,9 @@
                         <li class=" nav-item"><a class="nav-link" href="{{ asset('Dashboard') }}"><i class="nav-icon fas fa-th"></i><p>Dashboard</p></a>
                         </li>
                     
-                            {% import 'Macro/MenuAdminLTE.html.twig' as macros %}
+                            {% import 'Macro/Menu.html.twig' as macros %}
                             {% for menuItem in menuManager.getMenu() %}
-                                {{ macros.showMenu2(menuItem) }}
+                                {{ macros.showMenu(menuItem) }}
                             {% endfor %}
                                                             
                     </ul>
